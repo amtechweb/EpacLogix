@@ -26,16 +26,39 @@ def get_license():
     license_file_path = "LICENSE.txt"
     return send_file(license_file_path, mimetype="application/octet-stream")
 
-@app.route("/main")
-def main():
-    return render_template("main.html")
+@app.route("/service")
+def service():
+    return render_template("service.html")
 
 
 @app.route("/containers")
 def containers():
-    return render_template("single.html")
+    return render_template("containers.html")
 
 
+@app.route("/adr")
+def adr():
+    return render_template("adr.html")
+
+
+@app.route("/slopage")
+def slopage():
+    return render_template("slopage.html")
+
+
+@app.route("/sloservice")
+def sloservice():
+    return render_template("sloservice.html")
+
+
+@app.route("/slocontainers")
+def slocontainers():
+    return render_template("slocontainers.html")
+
+
+@app.route("/sloadr")
+def sloadr():
+    return render_template("sloadr.html")
 
 
 
