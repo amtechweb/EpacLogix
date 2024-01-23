@@ -32,7 +32,22 @@
 
 
   </head>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            {% if category == 'success' %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+            {% elif category == 'error' %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+
+
   
   <!-- <div class="site-wrap"> -->
 
@@ -57,7 +72,7 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li><a href="#section-home" class="nav-link">Home</a></li>
+                <li><a href="/" class="nav-link">Home</a></li>
                 <li class="has-children">
                   <a href="#section-about" class="nav-link">About Us</a>
                   <ul class="dropdown">
@@ -65,7 +80,7 @@
                   </ul>
                 </li>
                 <li><a href="#section-services" class="nav-link">Services</a></li>
-                <li><a href="#section-blog" class="nav-link">Our numbers</a></li>
+                <li><a href="#section-blog" class="nav-link">Case Studies</a></li>
                 <li><a href="#section-testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#section-contact" class="nav-link">Contact</a></li>
               </ul>
@@ -79,7 +94,7 @@
 
         </div>
 
-      
+
     </header>
 
   
@@ -242,12 +257,12 @@ Epac-logicx is at the forefront of redefining logistics solutions in Serbia. Spe
       <div class="container ">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
-            <h2 class="font-weight-light text-primary">Epac-logix numbers</h2>
+            <h2 class="font-weight-light text-primary">Case Studies</h2>
           </div>
         </div>
-             <div class="container" data-aos="fade-up" data-aos-delay="300">
+             <div class="container" data-aos="fade-up" data-aos-delay="200">
     <div class="row g-3">
-        <div class="col-12 col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-12 col-md-4">
             <div class="bg-primary p-4 text-center rounded-3">
                 <i class="fa fa-truck fa-2x text-white  mb-3"></i>
                 <h2  class="text-white mb-2" data-toggle="counter-up">17.289</h2>
@@ -346,71 +361,70 @@ Epac-logicx is at the forefront of redefining logistics solutions in Serbia. Spe
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
             <h2 class="font-weight-light text-primary">Contact Us</h2>
-            <p class="color-black-opacity-5">See Our Daily News &amp; Updates</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-7 mb-5">
 
             
+   <div id="success-message" style="display: none;" class="alert alert-success" role="alert">
+        <!-- Success message will be displayed here -->
+    </div>
+    <!-- index.html -->
+<form method="post" action="/contact" class="p-5 bg-white">
+  <div class="row form-group">
+    <div class="col-md-6 mb-3 mb-md-0">
+      <label class="text-black" for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label class="text-black" for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" class="form-control">
+    </div>
+  </div>
 
-            <form action="#" class="p-5 bg-white">
-             
+  <div class="row form-group">
+    <div class="col-md-12">
+      <label class="text-black" for="email">Email</label>
+      <input type="email" id="email" name="email" class="form-control">
+    </div>
+  </div>
 
-              <div class="row form-group">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">First Name</label>
-                  <input type="text" id="fname" class="form-control">
-                </div>
-                <div class="col-md-6">
-                  <label class="text-black" for="lname">Last Name</label>
-                  <input type="text" id="lname" class="form-control">
-                </div>
-              </div>
+  <div class="row form-group">
+    <div class="col-md-12">
+      <label class="text-black" for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" class="form-control">
+    </div>
+  </div>
 
-              <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="email">Email</label> 
-                  <input type="email" id="email" class="form-control">
-                </div>
-              </div>
+  <div class="row form-group">
+    <div class="col-md-12">
+      <label class="text-black" for="message">Message</label>
+      <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+    </div>
+  </div>
 
-              <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="subject">Subject</label> 
-                  <input type="subject" id="subject" class="form-control">
-                </div>
-              </div>
+  <div class="row form-group">
+    <div class="col-md-12">
+      <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
+    </div>
+  </div>
+</form>
 
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="text-black" for="message">Message</label> 
-                  <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
-                </div>
-              </div>
 
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
-                </div>
-              </div>
 
-  
-            </form>
           </div>
           <div class="col-md-5">
             
             <div class="p-4 mb-3 bg-white">
               <p class="mb-0 font-weight-bold">Address</p>
-              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+              <p class="mb-4"> Ulica Kralja Petra 35, Srbija</p>
 
               <p class="mb-0 font-weight-bold">Phone</p>
               <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
 
               <p class="mb-0 font-weight-bold">Email Address</p>
-              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+              <a href="mailto:info@epac-logix.rs">info@epac-logix.rs</a>
 
             </div>
           </div>
@@ -426,46 +440,35 @@ Epac-logicx is at the forefront of redefining logistics solutions in Serbia. Spe
             <div class="row">
               <div class="col-md-5 mr-auto">
                 <h2 class="footer-heading">About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure deserunt ut architecto dolores quo beatae laborum aliquam ipsam rem impedit obcaecati ea consequatur.</p>
+                <p>At Epac-Logix, we're your dedicated logistics partner. We specialize in tailoring efficient solutions to streamline your supply chain, ensuring your success is our top priority.</p>
               </div>
-              
-              <div class="col-md-3">
+
+              <div class="col-md-4">
                 <h2 class="footer-heading mb-4">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#section-about">About Us</a></li>
+                  <li><a href="#section-how-it-works">How it works</a></li>
+                  <li><a href="#section-services">Services</a></li>
+                  <li><a href="#section-contact">Contact Us</a></li>
                 </ul>
               </div>
-              <div class="col-md-3">
+            </div>
+          </div>
+           <div class="col-md-3">
                 <h2 class="footer-heading mb-4">Follow Us</h2>
                 <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
               </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-            <form action="#" method="post">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <div class="border-top pt-5">
               <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+           Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             </div>
           </div>

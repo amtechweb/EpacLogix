@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect, send_file
+from flask import Flask, render_template, request, flash, redirect,url_for, send_file
 from flask_mail import Mail, Message
 from email_validator import validate_email, EmailNotValidError
 
@@ -17,7 +17,7 @@ app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 
 
-@app.route("/")
+@app.route("/",methods=['GET'])
 def index():
     return render_template("index.html")
 
@@ -63,37 +63,40 @@ def sloadr():
 
 
 
-@app.route('/contact', methods=['GET', 'POST'])
+@app.route('/contact', methods=['POST'])
 def contact():
     if request.method == 'POST':
         # Process the form data
-        name = request.form['name']
+        fname = request.form['fname']
+        lname = request.form['lname']
         email = request.form['email']
-        mobile = request.form['mobile']
-        delivery_option = request.form['delivery_option']
-        special_note = request.form['special_note']
+        subject = request.form['subject']
+        message = request.form['message']
 
         try:
             # Validate email address
             v = validate_email(email)
-            email = v.email
+            email = v.normalized if v else None
 
+            if not email:
+                raise EmailNotValidError("Invalid email address")
             # Send the email
-            msg = Message('Nov obrazec - spletna stran',
-                          sender=('LeLog-spletna stran', 'contact.form2307@gmail.com'),
-                          recipients=['info@le-log.si'])
-            msg.body = f"Name: {name}\nEmail: {email}\nMobile: {mobile}\nDelivery Option: {delivery_option}\nSpecial Note: {special_note}"
+            msg = Message('New Form from website',
+                          sender=('Epac-logix website', 'contact.form2307@gmail.com'),
+                          recipients=['amefis1991@gmail.com'])
+            msg.body = f"Name: {fname} {lname}\nEmail: {email}\n\nMessage:\n{message}"
             mail.send(msg)
 
             success_message = 'Thank you for your message!'
+            print("Success message flashed:", success_message)
             flash(success_message, 'success')
-            return redirect('/')
+            return redirect(url_for('index'))
         except EmailNotValidError:
             flash('Please enter a valid email address.', 'error')
         except Exception as e:
             flash(f"An error occurred: {str(e)}", 'error')
 
-    return render_template('/')
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
