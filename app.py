@@ -66,20 +66,25 @@ def sloadr():
 @app.route('/contact', methods=['POST'])
 def contact():
     if request.method == 'POST':
-        # Process the form data
-        fname = request.form['fname']
-        lname = request.form['lname']
-        email = request.form['email']
-        subject = request.form['subject']
-        message = request.form['message']
-
         try:
+            # Process the form data
+            fname = request.form.get('fname')
+            lname = request.form.get('lname')
+            email = request.form.get('email')
+            subject = request.form.get('subject')
+            message = request.form.get('message')
+
+            # Check if all fields are provided
+            if not (fname and lname and email and subject and message):
+                raise ValueError("All fields are required")
+
             # Validate email address
             v = validate_email(email)
             email = v.normalized if v else None
 
             if not email:
                 raise EmailNotValidError("Invalid email address")
+
             # Send the email
             msg = Message('New Form from website',
                           sender=('Epac-logix website', 'contact.form2307@gmail.com'),
@@ -88,15 +93,15 @@ def contact():
             mail.send(msg)
 
             success_message = 'Thank you for your message!'
-            print("Success message flashed:", success_message)
             flash(success_message, 'success')
             return redirect(url_for('index'))
-        except EmailNotValidError:
-            flash('Please enter a valid email address.', 'error')
+
+        except (EmailNotValidError, ValueError) as e:
+            flash(str(e), 'error')
         except Exception as e:
             flash(f"An error occurred: {str(e)}", 'error')
 
-    return render_template('index.html')
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
