@@ -144,10 +144,25 @@ h5,
 }
 
 @media (max-width: 768px) {
-	.site-section {
-
+	body {
+    font-size:16px !important;
 
 	}
+	li{
+	font-size:16px !important;
+	}
+
+}
+
+@media (min-width: 991px) {
+	body {
+    font-size:20px !important;
+
+	}
+	li{
+	font-size:20px !important;
+	}
+
 }
 
 .site-section.site-section-sm {
@@ -429,6 +444,13 @@ h5,
 	/* Optionally, remove underline from the link */
 }
 
+@media (max-width: 768px) {
+	.site-logo img {
+width:100px!important;
+height:auto;
+	}
+}
+
 .site-navbar .site-menu-toggle {
 	color: #fff;
 }
@@ -650,6 +672,8 @@ h5,
 .site-navbar.scrolled .site-navigation .site-menu li a.active {
 	color: #f16821;
 }
+
+
 
 .site-navbar.scrolled .site-logo a {
 	color: #000 !important;
