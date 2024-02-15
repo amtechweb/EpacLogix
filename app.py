@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect,url_for, send_file
+from flask import Flask, render_template, request, flash, redirect,url_for
 from flask_mail import Mail, Message
 from email_validator import validate_email, EmailNotValidError
 
@@ -20,48 +20,9 @@ mail = Mail(app)
 @app.route("/",methods=['GET'])
 def index():
     return render_template("index.html")
-
-@app.route("/LICENSE.txt")
-def get_license():
-    license_file_path = "LICENSE.txt"
-    return send_file(license_file_path, mimetype="application/octet-stream")
-
-@app.route("/service")
-def service():
-    return render_template("service.html")
-
-
-@app.route("/containers")
-def containers():
-    return render_template("containers.html")
-
-
-@app.route("/adr")
-def adr():
-    return render_template("adr.html")
-
-
-@app.route("/slopage")
-def slopage():
-    return render_template("slopage.html")
-
-
-@app.route("/sloservice")
-def sloservice():
-    return render_template("sloservice.html")
-
-
-@app.route("/slocontainers")
-def slocontainers():
-    return render_template("slocontainers.html")
-
-
-@app.route("/sloadr")
-def sloadr():
-    return render_template("sloadr.html")
-
-
-
+@app.route("/homepage-srb")
+def homepage2():
+    return render_template("homepage-srb.html")
 
 @app.route('/contact', methods=['POST'])
 def contact():
