@@ -57,7 +57,7 @@ def contact():
             # Send the email
             msg = Message('New Form from website',
                           sender=('Epac-logix website', 'contact.form2307@gmail.com'),
-                          recipients=['amefis1991@gmail.com'])
+                          recipients=['info@epac-logix.rs'])
             msg.body = f"Name: {fname} {lname}\nEmail: {email}\n\nMessage:\n{message}"
             mail.send(msg)
 
