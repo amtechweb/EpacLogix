@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EPAC-Logix</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/css/jquery-ui.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css">
+
+
+
+    <link rel="stylesheet" href="static/css/aos.css">
+
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Add these in the <head> section of your HTML -->
+
+
+
+  </head>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            {% if category == 'success' %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+            {% elif category == 'error' %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+
+
+
+  <!-- <div class="site-wrap"> -->
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+<header class="site-navbar py-3 js-site-navbar site-navbar-target" role="banner" id="site-navbar">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-xl-2 site-logo text-weight-bold" id="logo">
+                <a href="/"><img src="static/img/Epac-logo.png" width="150" height="auto" alt="Epac-lgoix logo"></a>
+            </div>
+            <div class="col-12 col-md-10 d-none d-xl-block">
+                <nav class="site-navigation position-relative text-right" role="navigation">
+                    <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                        <li><a href="/" class="nav-link">Naslovna</a></li>
+                        <li><a href="#section-about" class="nav-link">O nama</a></li>
+                        <li><a href="#section-facts" class="nav-link">Činjenice</a></li>
+                        <li><a href="#section-services" class="nav-link">Usluge</a></li>
+                        <li><a href="#section-how-it-works" class="nav-link">Upit</a></li>
+                        <li><a href="#section-contact" class="nav-link">Kontakt</a></li>
+                        <a href="/logistics" class="language-flag"> <img src="static/img/uk.png" alt="eng" width="25" height="auto"></a>
+                        <a href="/srb" class="language-flag"> <img src="static/img/serbia.png" alt="srb" width="25" height="auto"></a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+                <a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="site-blocks-cover" style="position: relative;" data-aos="fade" data-stellar-background-ratio="0.5" id="section-home">
+  <video autoplay loop muted playsinline poster="static/img/hero_bg_2.jpg" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+    <source src="static/img/video-bg.mp4" type="video/mp4">
+
+
+  </video>
+  <div class="overlay" style="position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center" id="hero">
+      <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+        <h1 class="text-white font-weight-light text-uppercase" data-aos="fade-up">Neometana rešenja, globalne veze</h1>
+        <h2 class="mb-5 mt-5 text-uppercase text-primary font-weight-light" data-aos="fade-up" data-aos-delay="100">Vaš izabrani logistički partner</h2>
+        <p data-aos="fade-up" data-aos-delay="200"><a href="#section-how-it-works" class="btn btn-primary py-3 px-5 mt-3 text-white">Počnite!</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="site-section" id="section-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mb-5 order-md-2 d-flex align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="static/img/img_3.jpg" alt="Image" class="img-fluid rounded">
+          </div>
+          <div class="col-md-6 order-md-1" data-aos="fade-up">
+            <div class="text-left pb-1 border-primary mb-4">
+              <h2 class="text-primary">O nama</h2>
+            </div>
+            <p>
+Epac-logicx je na čelu redefinisanja logističkih rešenja u Srbiji. Specijalizovani smo za besprekorni transport i upravljanje lancem snabdevanja, gde prioritizujemo transparentnost, pouzdanost i zadovoljstvo korisnika kako bismo postavili nove standarde u industriji.            </p>
+
+            <p>Sa posvećenim timom i najsavremenijom tehnologijom, prilagođavamo rešenja kako bismo zadovoljili vaše specifične potrebe, bilo da je reč o optimizaciji mreža snabdevanja, upravljanju složenim operacijama prevoza tereta ili pružanju inovativnih logističkih strategija.</p>
+            <p class="mb-3"> Naš pristup je usmeren na stvaranje sledećih vrednosti:
+            <ul class="ul-check list-unstyled success font-weight-bold">
+              <li>Profesionalan odnos prema klijentima</li>
+              <li>Prilagodljivost i fleksibilnost</li>
+              <li>Odgovornost</li>
+            <li>Timski rad i poštovanje naših kolega</li>
+            </ul>
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  <div class="site-section bg-image overlay mb-5" style="background-image: url('static/img/hero_bg_3.jpg');" id="section-facts">
+      <div class="container ">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">EPAC-Logix činjenice </h2>
+          </div>
+        </div>
+             <div class="container" data-aos="fade-up" data-aos-delay="200">
+    <div class="row g-3">
+        <div class="col-12 col-md-4">
+            <div class="bg-primary p-4 text-center rounded-3">
+                <i class="fa fa-truck fa-2x text-white  mb-3"></i>
+                <h2  class="text-white mb-2" data-toggle="counter-up">1545</h2>
+                <p class="text-white  mb-0">Dostave</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="bg-secondary p-4 text-center rounded-3">
+                <i class="fa fa-users fa-2x text-white mb-3"></i>
+                <h2 class="text-white mb-2" data-toggle="counter-up">115</h2>
+                <p class="text-white mb-0">Klijenti</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="bg-success p-4 text-center rounded-3">
+                <i class="fa fa-globe fa-2x text-white mb-3"></i>
+                <h2 class="text-white mb-2" data-toggle="counter-up">12</h2>
+                <p class="text-white mb-0">Države</p>
+            </div>
+        </div>
+    </div>
+</div>
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light" id="section-services">
+      <div class="container">
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="mb-3 text-primary">Naše usluge</h2>
+
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-plane"></span></div>
+              <div>
+                <h3>Avio prevoz</h3>
+                <p>Brz i pouzdan transport robe vazduhom, obezbeđujući brzu dostavu i efikasna logistička rešenja. Iskoristite brzinu i globalni doseg vazdušnog tereta za pošiljke koje zahtevaju brzu dostavu.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-boat-ship"></span></div>
+              <div>
+                <h3>Brodski prevoz</h3>
+<p>Robusne usluge pomorskog transporta za ekonomičan i masovni transport robe. Plovite međunarodnim vodama uz naša sigurna i efikasna rešenja za pomorski transport, idealna za masovne terete i duge vremenske periode tranzita.</p>
+
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-truck"></span></div>
+              <div>
+                <h3>Drumski transport</h3>
+                <p>
+Bezprekidna rešenja za transport na kopnu osmišljena za efikasan prevoz robe. Od lokalne do prekogranične logistike, naše usluge kopnenog transporta garantuju pouzdanost, pravovremene dostave i fleksibilnost u upravljanju lancem snabdevanja.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-worldwide"></span></div>
+              <div>
+                <h3>Globalna dostava</h3>
+                <p>Sveobuhvatna logistička rešenja za dostavu širom sveta. Iskoristite naš globalni mrežni sistem i stručnost kako biste dosegnuli tržišta širom sveta, pružajući sveobuhvatne logističke usluge za vaše međunarodne potrebe u vezi sa isporukom.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="site-section bg-image overlay" style="background-image: url('static/img/hero_bg_4.jpg');" id="section-how-it-works">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary" data-aos="fade">Kako funkcioniše</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3 mb-lg-0" data-aos="fade" data-aos-delay="100">
+            <div class="how-it-work-item text-center ">
+              <span class="number">1</span>
+              <div class="how-it-work-body">
+                <h2>NARUČIVANJE</h2>
+                <p class="mb-5">Krenite s nama postavljanjem narudžbine.</p>
+                <ul class="ul-check list-unstyled success text-left">
+                  <li class="text-white">Odaberite uslugu koja vam je potrebna.</li>
+                  <li class="text-white">Priložite detalje o vašim robama, uključujući njihovu veličinu, težinu i odredište.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-3 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <div class="how-it-work-item text-center">
+              <span class="number">2</span>
+              <div class="how-it-work-body">
+                <h2>IZVRŠENJE UPLATE</h2>
+                <p class="mb-5">Sledeći korak je prelazak na sekciju za plaćanje.</p>
+                <ul class="ul-check list-unstyled success text-left">
+                  <li class="text-white">Izaberite pogodan način plaćanja.</li>
+                  <li class="text-white">Kada potvrdimo vašu uplatu, naš tim će započeti obradu vaše narudžbine.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-3 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="how-it-work-item text-center">
+              <span class="number">3</span>
+              <div class="how-it-work-body">
+                <h2>OSTANITE INFORMISANI</h2>
+                <p class="mb-5">Budite u toku.</p>
+                <ul class="ul-check list-unstyled success text-left">
+                  <li class="text-white">Dobijajte redovna ažuriranja o statusu vaše pošiljke.</li>
+                  <li class="text-white">Od polaska do dolaska, bićete obavešteni o svakom koraku puta.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light" id="section-contact">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Kontaktirajte nas</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mb-5">
+
+
+   <div id="success-message" style="display: none;" class="alert alert-success" role="alert">
+        <!-- Success message will be displayed here -->
+    </div>
+    <!-- index.html -->
+<form method="post" action="/contact" class="p-5 bg-white">
+  <div class="row form-group">
+    <div class="col-md-6 mb-3 mb-md-0">
+      <label class="text-black" for="fname">Ime</label>
+      <input type="text" id="fname" name="fname" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label class="text-black" for="lname">Prezime</label>
+      <input type="text" id="lname" name="lname" class="form-control">
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      <label class="text-black" for="email">Email</label>
+      <input type="email" id="email" name="email" class="form-control">
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      <label class="text-black" for="subject">Predmet</label>
+      <input type="text" id="subject" name="subject" class="form-control">
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      <label class="text-black" for="message">Poruka</label>
+      <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      <input type="submit" value="Pošalji Poruku" class="btn btn-primary py-2 px-4 text-white">
+    </div>
+  </div>
+</form>
+
+
+
+          </div>
+          <div class="col-md-5">
+
+            <div class="p-4 mb-3 bg-white">
+              <p class="mb-0 font-weight-bold">Addresa</p>
+              <p class="mb-4"> Ul. Djordja Stanojevica 9b/33, Bel Ville, Novi Beograd</p>
+                <!--
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                -->
+              <p class="mb-0 font-weight-bold">Email Addresa</p>
+              <a href="mailto:info@epac-logix.rs">info@epac-logix.rs</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5 mr-auto">
+                <h2 class="footer-heading">O nama</h2>
+                <p>U Epac-Logix-u, fokusirani smo na pružanje personalizovanih logističkih rešenja koja će unaprediti vaš lanac snabdevanja, sa ciljem da vaš uspeh bude naša najviša prioritet.</p>
+              </div>
+
+              <div class="col-md-4">
+                <h2 class="footer-heading mb-4">Brzi linkovi</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#section-about">O Nama</a></li>
+                  <li><a href="#section-how-it-works">Upit</a></li>
+                  <li><a href="#section-services">Usluge</a></li>
+                  <li><a href="#section-contact">Kontakt</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+           <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Pratite nas</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+           Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  <!-- </div> -->
+  <div id="cookie-popup" class="cookie-popup">
+   <p>Ovaj sajt koristi kolačiće kako bismo vam obezbedili najbolje iskustvo na našem sajtu. <a href="#" onclick="showCookieDetails()">Pročitajte više</a></p>
+<div class="cookie-options">
+    <button onclick="acceptCookies()">Prihvati</button>
+</div>
+</div>
+<div id="cookie-details-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCookieDetailsModal()">&times;</span>
+        <h2>Politika kolačića</h2>
+        <p>Ova Politika kolačića objašnjava kako Epac-logix koristi kolačiće i slične tehnologije kako bi vas prepoznao kada posetite našu web lokaciju.</p>
+        <h3>Šta su kolačići?</h3>
+        <p>Kolačići su male tekstualne datoteke koje vaš web pregledač šalje sa veb lokacije koju posetite. Datoteka kolačića se čuva u vašem web pregledaču i omogućava veb lokaciji ili trećoj strani da vas prepozna i učini vašu sledeću posetu lakšom i korisnijom za vas.</p>
+        <h3>Kako koristimo kolačiće?</h3>
+        <p>Kada koristite i pristupate našoj veb lokaciji, možemo postaviti nekoliko datoteka kolačića u vašem web pregledaču. Kolačiće koristimo u sledeće svrhe:</p>
+        <ul>
+            <li>Da omogućimo određene funkcije web lokacije</li>
+            <li>Da pružimo analitiku</li>
+            <li>Da sačuvamo vaše postavke</li>
+        </ul>
+        <h3>Kakve vrste kolačića koristimo?</h3>
+        <p>Postoji nekoliko različitih vrsta kolačića, međutim, naša veb lokacija koristi:</p>
+        <ul>
+            <li>Osnovni kolačići: Ovi kolačići su neophodni za pravilno funkcionisanje web lokacije.</li>
+            <li>Analitički kolačići: Ovi kolačići nam omogućavaju analizu kako korisnici koriste veb lokaciju i poboljšavaju funkcionalnost web lokacije.</li>
+            <li>Kolačići postavki: Ovi kolačići se koriste za čuvanje vaših postavki i podešavanja.</li>
+        </ul>
+        <h3>Kako upravljati kolačićima?</h3>
+        <p>Možete kontrolisati i/ili brisati kolačiće po želji. Možete obrisati sve kolačiće koji se već nalaze na vašem računaru i možete postaviti većinu pregledača da ih spreče da budu postavljeni. Međutim, ako to uradite, možda ćete morati ručno da prilagodite neke postavke svaki put kada posetite sajt i neke usluge i funkcionalnosti možda neće raditi.</p>
+    </div>
+</div>
+
+<script src="static/js/srb-js.js"></script>
+  <script src="static/js/second.js"></script>
+<script src="static/js/counter.js"></script>
+  <script src="static/js/jquery-3.3.1.min.js"></script>
+  <script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="static/js/jquery-ui.js"></script>
+  <script src="static/js/jquery.easing.1.3.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/owl.carousel.min.js"></script>
+  <script src="static/js/jquery.stellar.min.js"></script>
+  <script src="static/js/jquery.countdown.min.js"></script>
+  <script src="static/js/jquery.magnific-popup.min.js"></script>
+  <script src="static/js/bootstrap-datepicker.min.js"></script>
+  <script src="static/js/aos.js"></script>
+  <script src="static/js/main.js"></script>
+
+  </body>
+</html>

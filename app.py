@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect,url_for
+from flask import Flask, render_template, request, flash, redirect,url_for,make_response
 from flask_mail import Mail, Message
 from email_validator import validate_email, EmailNotValidError
 
@@ -16,13 +16,21 @@ app.config['MAIL_USE_SSL'] = True
 # Initialize Flask-Mail
 mail = Mail(app)
 
-
-@app.route("/",methods=['GET'])
-def index():
+@app.route("/")
+def test():
     return render_template("index.html")
-@app.route("/homepage-srb")
-def homepage2():
-    return render_template("homepage-srb.html")
+
+@app.route("/logistics")
+def logistics():
+    return render_template("logistics.html")
+
+@app.route("/scc")
+def scc():
+    return render_template("scc.html")
+
+@app.route("/srb")
+def srb():
+    return render_template("srb.html")
 
 @app.route('/contact', methods=['POST'])
 def contact():
@@ -49,7 +57,7 @@ def contact():
             # Send the email
             msg = Message('New Form from website',
                           sender=('Epac-logix website', 'contact.form2307@gmail.com'),
-                          recipients=['info@epac-logix.rs'])
+                          recipients=['amefis1991@gmail.com'])
             msg.body = f"Name: {fname} {lname}\nEmail: {email}\n\nMessage:\n{message}"
             mail.send(msg)
 

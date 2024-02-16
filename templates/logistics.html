@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EPAC-Logix</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/css/jquery-ui.css">
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="static/fonts/flaticon/font/flaticon.css">
+
+
+
+    <link rel="stylesheet" href="static/css/aos.css">
+
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Add these in the <head> section of your HTML -->
+
+
+
+  </head>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            {% if category == 'success' %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+            {% elif category == 'error' %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
+
+
+  
+  <!-- <div class="site-wrap"> -->
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+<header class="site-navbar py-3 js-site-navbar site-navbar-target" role="banner" id="site-navbar">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-xl-2 site-logo text-weight-bold" id="logo">
+                <a href="/"><img src="static/img/Epac-logo.png" width="150" height="auto" alt="Epac-lgoix logo"></a>
+            </div>
+            <div class="col-12 col-md-10 d-none d-xl-block">
+                <nav class="site-navigation position-relative text-right" role="navigation">
+                    <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="#section-about" class="nav-link">About us</a></li>
+                        <li><a href="#section-facts" class="nav-link">Facts</a></li>
+                        <li><a href="#section-services" class="nav-link">Services</a></li>
+                        <li><a href="#section-how-it-works" class="nav-link">How it works</a></li>
+                        <li><a href="#section-contact" class="nav-link">Contact</a></li>
+                        <a href="/logistics" class="language-flag"> <img src="static/img/uk.png" alt="eng" width="25" height="auto"></a>
+                        <a href="/srb" class="language-flag"> <img src="static/img/serbia.png" alt="srb" width="25" height="auto"></a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+                <a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+<div class="site-blocks-cover" style="position: relative;" data-aos="fade" data-stellar-background-ratio="0.5" id="section-home">
+  <video autoplay loop muted playsinline poster="static/img/hero_bg_2.jpg" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+    <source src="static/img/video-bg.mp4" type="video/mp4">
+
+
+  </video>
+  <div class="overlay" style="position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center" id="hero">
+      <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+        <h1 class="text-white font-weight-light text-uppercase" data-aos="fade-up">Seamless Solutions, Global Connections</h1>
+        <h2 class="mb-5 mt-5 text-uppercase text-primary font-weight-light" data-aos="fade-up" data-aos-delay="100">Your Logistics Partner of Choice</h2>
+        <p data-aos="fade-up" data-aos-delay="200"><a href="#section-how-it-works" class="btn btn-primary py-3 px-5 mt-3 text-white">Get Started!</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="site-section" id="section-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mb-5 order-md-2 d-flex align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="static/img/img_3.jpg" alt="Image" class="img-fluid rounded">
+          </div>
+          <div class="col-md-6 order-md-1" data-aos="fade-up">
+            <div class="text-left pb-1 border-primary mb-4">
+              <h2 class="text-primary">About Us</h2>
+            </div>
+            <p>
+Epac-logicx is at the forefront of redefining logistics solutions in Serbia. Specializing in seamless transportation and supply chain management, we prioritize transparency, reliability, and customer satisfaction to set new industry standards.
+            </p>
+
+            <p>With a dedicated team and cutting-edge technology, we tailor solutions to meet your specific needs, whether it's optimizing supply chain networks, managing complex freight operations, or providing innovative logistics strategies.</p>
+            <p class="mb-3"> Our strategy is oriented towards creating the following values:
+            <ul class="ul-check list-unstyled success font-weight-bold">
+              <li>A professional attitude towards customers</li>
+              <li>Adaptability and flexibility</li>
+              <li>Responsibility</li>
+            <li>Teamwork and appreciation of our colleagues</li>
+            </ul>
+
+
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+  <div class="site-section bg-image overlay mb-5" style="background-image: url('static/img/hero_bg_3.jpg');" id="section-facts">
+      <div class="container ">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">EPAC-Logix Facts</h2>
+          </div>
+        </div>
+             <div class="container" data-aos="fade-up" data-aos-delay="200">
+    <div class="row g-3">
+        <div class="col-12 col-md-4">
+            <div class="bg-primary p-4 text-center rounded-3">
+                <i class="fa fa-truck fa-2x text-white  mb-3"></i>
+                <h2  class="text-white mb-2" data-toggle="counter-up">1545</h2>
+                <p class="text-white  mb-0">Deliveries</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="bg-secondary p-4 text-center rounded-3">
+                <i class="fa fa-users fa-2x text-white mb-3"></i>
+                <h2 class="text-white mb-2" data-toggle="counter-up">115</h2>
+                <p class="text-white mb-0">Clients</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="bg-success p-4 text-center rounded-3">
+                <i class="fa fa-globe fa-2x text-white mb-3"></i>
+                <h2 class="text-white mb-2" data-toggle="counter-up">12</h2>
+                <p class="text-white mb-0">Countries</p>
+            </div>
+        </div>
+    </div>
+</div>
+      </div>
+    </div>
+  
+
+    <div class="site-section bg-light" id="section-services">
+      <div class="container">
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="mb-3 text-primary">Our Services</h2>
+
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-plane"></span></div>
+              <div>
+                <h3>Air Freight</h3>
+                <p>Swift and reliable transportation of goods via air, ensuring rapid delivery and efficient logistics solutions. Benefit from the speed and global reach of air freight for time-sensitive shipments.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-boat-ship"></span></div>
+              <div>
+                <h3>Ocean Freight</h3>
+                <p>Robust sea freight services for cost-effective and large-scale transportation of goods. Navigate international waters with our secure and efficient ocean freight solutions, ideal for bulk cargo and longer transit times.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-truck"></span></div>
+              <div>
+                <h3>Land Transportation</h3>
+                <p>Seamless ground transportation solutions designed for the efficient movement of goods. From local to cross-border logistics, our land transportation services ensure reliability, timely deliveries, and flexibility in supply chain management.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-worldwide"></span></div>
+              <div>
+                <h3>Worldwide Delivery</h3>
+                <p>Comprehensive logistics solutions for worldwide delivery. Leverage our global network and expertise to reach markets across the globe, providing end-to-end logistics services for your international shipping needs.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="site-section bg-image overlay" style="background-image: url('static/img/hero_bg_4.jpg');" id="section-how-it-works">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary" data-aos="fade">How It Works</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3 mb-lg-0" data-aos="fade" data-aos-delay="100">
+            <div class="how-it-work-item text-center ">
+              <span class="number">1</span>
+              <div class="how-it-work-body">
+                <h2>MAKE AN ORDER</h2>
+                <p class="mb-5">Start your journey with us by placing an order</p>
+                <ul class="ul-check list-unstyled success text-left">
+                  <li class="text-white">Select the service you need</li>
+                  <li class="text-white">Provide details about your goods, including their size, weight, and destination.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-3 mb-lg-0" data-aos="fade" data-aos-delay="200">
+            <div class="how-it-work-item text-center">
+              <span class="number">2</span>
+              <div class="how-it-work-body">
+                <h2>MAKE A PAYMENT</h2>
+                <p class="mb-5">Next, proceed to the payment section</p>
+                <ul class="ul-check list-unstyled success text-left">
+                  <li class="text-white">Choose a convenient payment method.</li>
+                  <li class="text-white">Once we confirm your payment, our team will start processing your order.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-3 mb-lg-0" data-aos="fade" data-aos-delay="300">
+            <div class="how-it-work-item text-center">
+              <span class="number">3</span>
+              <div class="how-it-work-body">
+                <h2>STAY UPDATED</h2>
+                <p class="mb-5">Get informed</p>
+                <ul class="ul-check list-unstyled success text-left">
+                  <li class="text-white">We’ll send you regular updates about your shipment.</li>
+                  <li class="text-white">From departure to arrival, you’ll be notified every step of the way.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light" id="section-contact">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Contact Us</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mb-5">
+
+            
+   <div id="success-message" style="display: none;" class="alert alert-success" role="alert">
+        <!-- Success message will be displayed here -->
+    </div>
+    <!-- index.html -->
+<form method="post" action="/contact" class="p-5 bg-white">
+  <div class="row form-group">
+    <div class="col-md-6 mb-3 mb-md-0">
+      <label class="text-black" for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label class="text-black" for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" class="form-control">
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      <label class="text-black" for="email">Email</label>
+      <input type="email" id="email" name="email" class="form-control">
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      <label class="text-black" for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" class="form-control">
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      <label class="text-black" for="message">Message</label>
+      <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="col-md-12">
+      <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
+    </div>
+  </div>
+</form>
+
+
+
+          </div>
+          <div class="col-md-5">
+            
+            <div class="p-4 mb-3 bg-white">
+              <p class="mb-0 font-weight-bold">Address</p>
+              <p class="mb-4"> Ul. Djordja Stanojevica 9b/33, Bel Ville, Novi Beograd</p>
+                <!--
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                -->
+              <p class="mb-0 font-weight-bold">Email Address</p>
+              <a href="mailto:info@epac-logix.rs">info@epac-logix.rs</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5 mr-auto">
+                <h2 class="footer-heading">About Us</h2>
+                <p>At Epac-Logix, we're your dedicated logistics partner. We specialize in tailoring efficient solutions to streamline your supply chain, ensuring your success is our top priority.</p>
+              </div>
+
+              <div class="col-md-4">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#section-about">About Us</a></li>
+                  <li><a href="#section-how-it-works">How it works</a></li>
+                  <li><a href="#section-services">Services</a></li>
+                  <li><a href="#section-contact">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+           <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+              </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <!--Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+           Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+  <!-- </div> -->
+<div id="cookie-popup" class="cookie-popup">
+    <p>This website uses cookies to ensure you get the best experience on our website. <a href="#" onclick="showCookieDetails()">Read more</a></p>
+    <div class="cookie-options">
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+</div>
+<!-- End Cookie Popup -->
+
+<!-- Cookie Details Modal -->
+<div id="cookie-details-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCookieDetailsModal()">&times;</span>
+        <h2>Cookie Policy</h2>
+        <p>This Cookie Policy explains how Epac-logix uses cookies and similar technologies to recognize you when you visit our website.</p>
+        <h3>What are cookies?</h3>
+        <p>Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the website or a third-party to recognize you and make your next visit easier and more useful to you.</p>
+        <h3>How we use cookies?</h3>
+        <p>When you use and access our website, we may place a number of cookies files in your web browser. We use cookies for the following purposes:</p>
+        <ul>
+            <li>To enable certain functions of the website</li>
+            <li>To provide analytics</li>
+            <li>To store your preferences</li>
+        </ul>
+        <h3>What types of cookies do we use?</h3>
+        <p>There are several different types of cookies, however, our website uses:</p>
+        <ul>
+            <li>Essential cookies: These cookies are necessary for the website to function properly.</li>
+            <li>Analytical cookies: These cookies allow us to analyze how users use the website and improve the website's functionality.</li>
+            <li>Preference cookies: These cookies are used to store your preferences and settings.</li>
+        </ul>
+        <h3>How to manage cookies?</h3>
+        <p>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work.</p>
+    </div>
+</div>
+
+
+<script>
+    // Function to set cookie and close the popup
+    function acceptCookies() {
+        // Set cookie expiration date to 1 year from now
+        var expiryDate = new Date();
+        expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+        // Set cookie value
+        document.cookie = "cookies_accepted=true; expires=" + expiryDate.toUTCString() + "; path=/";
+        // Hide the popup
+        document.getElementById("cookie-popup").style.display = "none";
+    }
+
+    // Function to decline cookies and close the popup
+    function declineCookies() {
+        // Set cookie value to decline
+        document.cookie = "cookies_accepted=false; path=/";
+        // Hide the popup
+        document.getElementById("cookie-popup").style.display = "none";
+    }
+
+    // Function to show cookie details modal
+    function showCookieDetails() {
+        document.getElementById("cookie-details-modal").style.display = "block";
+    }
+
+    // Function to close cookie details modal
+    function closeCookieDetailsModal() {
+        document.getElementById("cookie-details-modal").style.display = "none";
+    }
+
+    // Check if the cookies have been accepted
+    window.onload = function() {
+        var cookiesAccepted = getCookie("cookies_accepted");
+        if (!cookiesAccepted) {
+            document.getElementById("cookie-popup").style.display = "block";
+        }
+    };
+
+    // Function to get cookie value by name
+    function getCookie(name) {
+        var cookieArr = document.cookie.split("; ");
+        for (var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+            if (name === cookiePair[0]) {
+                return cookiePair[1];
+            }
+        }
+        return null;
+    }
+</script>
+
+
+
+
+  <script src="static/js/second.js"></script>
+<script src="static/js/counter.js"></script>
+  <script src="static/js/jquery-3.3.1.min.js"></script>
+  <script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="static/js/jquery-ui.js"></script>
+  <script src="static/js/jquery.easing.1.3.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/owl.carousel.min.js"></script>
+  <script src="static/js/jquery.stellar.min.js"></script>
+  <script src="static/js/jquery.countdown.min.js"></script>
+  <script src="static/js/jquery.magnific-popup.min.js"></script>
+  <script src="static/js/bootstrap-datepicker.min.js"></script>
+  <script src="static/js/aos.js"></script>
+  <script src="static/js/main.js"></script>
+
+  </body>
+</html>
